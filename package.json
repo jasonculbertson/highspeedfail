@@ -2,5 +2,9 @@
   "name": "highspeedfail",
   "version": "1.0.0",
   "private": true,
-  "description": "High-Speed Fail — California HSR accountability site (static)"
+  "description": "High-Speed Fail — California HSR accountability site (static)",
+  "scripts": {
+    "deploy": "vercel deploy --prod --yes --scope jasons-projects-45a6719d",
+    "deploy:preview": "vercel deploy --yes --scope jasons-projects-45a6719d"
+  }
 }

@@ -146,7 +146,7 @@ const DAILY_RATE=4650000,SEC_RATE=DAILY_RATE/86400;
 const pageStart=Date.now();
 function updateCounter(){const el=document.getElementById('page-counter');if(!el)return;const elapsed=(Date.now()-pageStart)/1000;
   const spent=elapsed*SEC_RATE;
-  el.textContent='$'+(spent>=1000000?((spent/1000000).toFixed(2)+'M'):(spent>=1000?(Math.round(spent/1000)+'K'):Math.round(spent).toLocaleString()));
+  el.textContent='$'+(spent>=1000000?((spent/1000000).toFixed(2)+'M'):(spent>=1000?((spent/1000).toFixed(1)+'K'):Math.round(spent).toLocaleString()));
 }
 setInterval(updateCounter,100);
 
