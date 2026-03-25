@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Board — High-Speed Fail</title>
+<meta name="description" content="Directors, conflicts, CEO history.">
+<meta property="og:title" content="Board — High-Speed Fail">
+<meta property="og:description" content="Directors, conflicts, CEO history.">
+<link rel="stylesheet" href="css/site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sbar">
+  <div class="sbar-t">Share this investigation</div>
+  <div style="display:flex;gap:8px">
+    <button type="button" class="sbtn" onclick="shareX()">𝕏 Post</button>
+  </div>
+</div>
+<nav class="site-nav" aria-label="Sections"><div class="site-nav-inner">
+<a class="site-brand" href="index.html">HIGH-SPEED FAIL</a>
+<div class="site-nav-links">
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="spending.html">Spending</a>
+<a class="nav-link" href="vendors.html">Vendors</a>
+<a class="nav-link" href="flags.html">Flags</a>
+<a class="nav-link is-active" href="board.html">Board</a>
+<a class="nav-link" href="promises.html">Promises</a>
+<a class="nav-link" href="connections.html">Connections</a>
+<a class="nav-link" href="timeline.html">Timeline</a>
+<a class="nav-link" href="progress.html">Progress</a>
+<a class="nav-link" href="compare.html">Global</a>
+<a class="nav-link" href="waste.html">Waste</a>
+<a class="nav-link" href="calculator.html">Your Share</a>
+<a class="nav-link nav-breaking" href="breaking.html">Breaking</a>
+</div></div></nav>
+<main class="main">
+
+  <div class="shed">The Board of Directors</div>
+  <p class="sdek">Nine members vote to approve all major contracts, change orders, and spending decisions. Five appointed by the Governor. Two by the Senate. Two by the Assembly. Here's who they are — and what they bring with them.</p>
+  <div class="cgrid">
+    <div class="cbox"><div class="ct">Board Composition — Who Appointed Them</div><div style="height:200px;position:relative"><canvas id="boardPie"></canvas></div></div>
+    <div class="cbox"><div class="ct">Board Member Industry Background</div><div style="height:200px;position:relative"><canvas id="boardBg"></canvas></div></div>
+  </div>
+  <div class="box" style="border-left:4px solid var(--red);background:#fdf5f5;margin-bottom:20px">
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:8px">⚠ Structural Conflict of Interest</div>
+    <p style="font-size:13px;color:var(--smoke);line-height:1.65">The board that approves CAHSR contracts includes the CEO of a major construction trade association (whose members hold CAHSR contracts), a real estate developer with Central Valley projects, and a former Newsom legislative aide now working as a lobbyist. None of these individuals are required by law to recuse themselves from votes affecting their industries.</p>
+  </div>
+  <div class="sl">Board Members — Full Profiles</div>
+  <div id="board-members"></div>
+  <div class="box" style="margin-top:20px">
+    <div class="sl">CEO History — The Revolving Door</div>
+    <div id="ceo-history"></div>
+  </div>
+
+</main>
+<footer class="footer">
+  <div class="fl">HIGH-SPEED FAIL</div>
+  <div class="ft">Built from public records · California High-Speed Rail Authority · hsr.ca.gov<br>Data from official CAHSR financial reports, Active Contract Reports, board minutes, construction updates, FEC filings, OpenSecrets.org, and CA Secretary of State CAL-ACCESS.<br>Nonpartisan public accountability project. All figures nominal USD unless noted.</div>
+  <div class="flinks">
+    <a href="https://hsr.ca.gov/about/transparency-accountability/funding/" class="flink" target="_blank" rel="noopener noreferrer">Source Data</a>
+    <a href="https://hsr.ca.gov/wp-content/uploads/2026/02/2026-HSR-Draft-Business-Plan-02282026.pdf" class="flink" target="_blank" rel="noopener noreferrer">2026 Business Plan</a>
+    <a href="https://buildhsr.com" class="flink" target="_blank" rel="noopener noreferrer">Build HSR Progress</a>
+    <a href="https://www.opensecrets.org" class="flink" target="_blank" rel="noopener noreferrer">OpenSecrets</a>
+    <a href="https://powersearch.sos.ca.gov/" class="flink" target="_blank" rel="noopener noreferrer">CA SOS CAL-ACCESS</a>
+    <a href="https://www.fec.gov/data/" class="flink" target="_blank" rel="noopener noreferrer">FEC.gov</a>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

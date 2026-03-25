@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline — High-Speed Fail</title>
+<meta name="description" content="A decade of delays and milestones.">
+<meta property="og:title" content="Timeline — High-Speed Fail">
+<meta property="og:description" content="A decade of delays and milestones.">
+<link rel="stylesheet" href="css/site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sbar">
+  <div class="sbar-t">Share this investigation</div>
+  <div style="display:flex;gap:8px">
+    <button type="button" class="sbtn" onclick="shareX()">𝕏 Post</button>
+  </div>
+</div>
+<nav class="site-nav" aria-label="Sections"><div class="site-nav-inner">
+<a class="site-brand" href="index.html">HIGH-SPEED FAIL</a>
+<div class="site-nav-links">
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="spending.html">Spending</a>
+<a class="nav-link" href="vendors.html">Vendors</a>
+<a class="nav-link" href="flags.html">Flags</a>
+<a class="nav-link" href="board.html">Board</a>
+<a class="nav-link" href="promises.html">Promises</a>
+<a class="nav-link" href="connections.html">Connections</a>
+<a class="nav-link is-active" href="timeline.html">Timeline</a>
+<a class="nav-link" href="progress.html">Progress</a>
+<a class="nav-link" href="compare.html">Global</a>
+<a class="nav-link" href="waste.html">Waste</a>
+<a class="nav-link" href="calculator.html">Your Share</a>
+<a class="nav-link nav-breaking" href="breaking.html">Breaking</a>
+</div></div></nav>
+<main class="main">
+
+  <div class="shed">A Decade of Delays</div>
+  <p class="sdek">Key events, accountability failures, and political battles from Prop 1A to today. Red = flags/overruns, orange = political, green = milestones.</p>
+  <div class="cbox" style="margin-bottom:22px"><div class="ct">Annual Spend vs. Key Events ($M)</div><div style="height:220px;position:relative"><canvas id="tlChart"></canvas></div></div>
+  <div id="tl-rows"></div>
+  <div class="boxd" style="margin-top:22px">
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px">The Shifting Goalposts</div>
+    <div style="overflow-x:auto"><table class="ctab" style="color:var(--paper)">
+      <thead><tr><th>Year</th><th>Promise</th><th>Cost</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>2008</td><td>SF–LA by 2020</td><td>$33B</td><td><span class="chip" style="color:var(--red);border-color:#c8292944">Missed</span></td></tr>
+        <tr><td>2012</td><td>SF–LA by 2029</td><td>$68B</td><td><span class="chip" style="color:var(--red);border-color:#c8292944">Revised</span></td></tr>
+        <tr><td>2016</td><td>Central Valley by 2022</td><td>$64B</td><td><span class="chip" style="color:var(--red);border-color:#c8292944">Missed</span></td></tr>
+        <tr><td>2018</td><td>Merced–Bakersfield by 2028</td><td>$77B</td><td><span class="chip" style="color:var(--gold);border-color:#b8832a44">At Risk</span></td></tr>
+        <tr><td>2022</td><td>Bay Area–LA by 2033</td><td>$105B</td><td><span class="chip" style="color:var(--gold);border-color:#b8832a44">Revised</span></td></tr>
+        <tr><td>2024</td><td>Bay Area–LA by 2038–2039</td><td>$89–128B</td><td><span class="chip" style="color:var(--grn);border-color:#1e7e3e44">Current</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+</main>
+<footer class="footer">
+  <div class="fl">HIGH-SPEED FAIL</div>
+  <div class="ft">Built from public records · California High-Speed Rail Authority · hsr.ca.gov<br>Data from official CAHSR financial reports, Active Contract Reports, board minutes, construction updates, FEC filings, OpenSecrets.org, and CA Secretary of State CAL-ACCESS.<br>Nonpartisan public accountability project. All figures nominal USD unless noted.</div>
+  <div class="flinks">
+    <a href="https://hsr.ca.gov/about/transparency-accountability/funding/" class="flink" target="_blank" rel="noopener noreferrer">Source Data</a>
+    <a href="https://hsr.ca.gov/wp-content/uploads/2026/02/2026-HSR-Draft-Business-Plan-02282026.pdf" class="flink" target="_blank" rel="noopener noreferrer">2026 Business Plan</a>
+    <a href="https://buildhsr.com" class="flink" target="_blank" rel="noopener noreferrer">Build HSR Progress</a>
+    <a href="https://www.opensecrets.org" class="flink" target="_blank" rel="noopener noreferrer">OpenSecrets</a>
+    <a href="https://powersearch.sos.ca.gov/" class="flink" target="_blank" rel="noopener noreferrer">CA SOS CAL-ACCESS</a>
+    <a href="https://www.fec.gov/data/" class="flink" target="_blank" rel="noopener noreferrer">FEC.gov</a>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

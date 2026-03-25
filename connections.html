@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connections — High-Speed Fail</title>
+<meta name="description" content="Lobbying, ownership, political ties.">
+<meta property="og:title" content="Connections — High-Speed Fail">
+<meta property="og:description" content="Lobbying, ownership, political ties.">
+<link rel="stylesheet" href="css/site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sbar">
+  <div class="sbar-t">Share this investigation</div>
+  <div style="display:flex;gap:8px">
+    <button type="button" class="sbtn" onclick="shareX()">𝕏 Post</button>
+  </div>
+</div>
+<nav class="site-nav" aria-label="Sections"><div class="site-nav-inner">
+<a class="site-brand" href="index.html">HIGH-SPEED FAIL</a>
+<div class="site-nav-links">
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="spending.html">Spending</a>
+<a class="nav-link" href="vendors.html">Vendors</a>
+<a class="nav-link" href="flags.html">Flags</a>
+<a class="nav-link" href="board.html">Board</a>
+<a class="nav-link" href="promises.html">Promises</a>
+<a class="nav-link is-active" href="connections.html">Connections</a>
+<a class="nav-link" href="timeline.html">Timeline</a>
+<a class="nav-link" href="progress.html">Progress</a>
+<a class="nav-link" href="compare.html">Global</a>
+<a class="nav-link" href="waste.html">Waste</a>
+<a class="nav-link" href="calculator.html">Your Share</a>
+<a class="nav-link nav-breaking" href="breaking.html">Breaking</a>
+</div></div></nav>
+<main class="main">
+
+  <div class="shed">Follow the Connections</div>
+  <p class="sdek">Who runs these companies, who owns them, and who they've paid. All data from FEC filings, OpenSecrets, and California Secretary of State disclosures.</p>
+  <div style="border:1px solid #c09020;background:#fdfcf3;padding:12px 16px;margin-bottom:22px;border-left:4px solid #c09020"><div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c09020;margin-bottom:5px">Disclaimer</div><p style="font-size:12px;color:var(--smoke);line-height:1.55">Political contributions and lobbying are legal. Their disclosure here is for public accountability. Connections between contractors and politicians do not imply corruption. Readers draw their own conclusions.</p></div>
+  <div class="cbox" style="margin-bottom:20px"><div class="ct">Federal Lobbying Spend — Key Vendors (Annual, $000s)</div><div style="height:240px;position:relative"><canvas id="lobbyChart"></canvas></div></div>
+  <div class="cgrid">
+    <div class="cbox"><div class="ct">Documented Political Contributions ($)</div><div style="height:220px;position:relative"><canvas id="contribChart"></canvas></div></div>
+    <div class="cbox"><div class="ct">Lobbying Issues Filed by Vendors</div><div style="height:220px;position:relative"><canvas id="lobbyIssues"></canvas></div></div>
+  </div>
+  <div class="boxd" style="margin-bottom:22px">
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:12px">⚠ Spotlight: The Feinstein–Blum–Tutor Perini Connection</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;background:#1a1916;margin-bottom:16px">
+      <div style="background:var(--char);padding:13px"><div style="font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:5px">U.S. Senator</div><div style="font-family:var(--dis);font-size:15px;color:var(--paper);font-weight:600">Dianne Feinstein</div><div style="font-size:11px;color:#9a9080;margin-top:4px;line-height:1.5">Chaired Senate Military Construction Appropriations Subcommittee 2001–2007, approving $759M in Perini contracts. Supported CAHSR federal funding. Died 2023.</div></div>
+      <div style="background:var(--char);padding:13px"><div style="font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:5px">Husband &amp; Investor</div><div style="font-family:var(--dis);font-size:15px;color:var(--paper);font-weight:600">Richard C. Blum</div><div style="font-size:11px;color:#9a9080;margin-top:4px;line-height:1.5">Chairman, Blum Capital Partners. Held ~75% controlling stake in Tutor Perini 1998–2005. Sold at estimated $5–10M profit. Married Feinstein 1980. Died February 2022.</div></div>
+      <div style="background:var(--char);padding:13px"><div style="font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:5px">CAHSR Contractor CEO</div><div style="font-family:var(--dis);font-size:15px;color:var(--paper);font-weight:600">Ronald Tutor</div><div style="font-size:11px;color:#9a9080;margin-top:4px;line-height:1.5">CEO, Tutor Perini Corporation. Partnered with Blum in 1998. CAHSR bid accepted despite lowest technical score after mid-evaluation rule change by CAHSR staff in 2013.</div></div>
+    </div>
+    <div style="font-size:13px;color:#9a9080;line-height:1.75"><strong style="color:#ddd4c0">1998–2005:</strong> Blum holds controlling stake. Feinstein's MILCON committee approves $759M in Perini contracts. Her office denies involvement in contract decisions.<br><strong style="color:#ddd4c0">2013:</strong> CAHSR staff changes bid criteria mid-evaluation to allow Tutor Perini's lowest-technical-score bid to proceed. Congressional hearing called.<br><strong style="color:#ddd4c0">2021:</strong> Tutor Perini donates $25,000 to Newsom recall defense while CP1 renegotiation is ongoing — confirmed via CA Secretary of State filing.<br><strong style="color:#ddd4c0">Assessment:</strong> Blum's direct stake was sold 8 years before the CAHSR award. The mid-evaluation rule change and the 2021 donation to Newsom remain unexplained in public records.</div>
+  </div>
+  <div class="sl">Vendor Profiles — Ownership, Leadership &amp; Political Activity</div>
+  <div id="vendor-profiles"></div>
+  <div class="box" style="margin-top:22px"><div class="sl">Notable Political Donations — Timeline</div><div id="donations-timeline"></div><p style="font-size:11px;color:var(--muted);margin-top:10px;font-family:var(--mono);letter-spacing:.5px">Sources: CA SOS CAL-ACCESS · FEC.gov · OpenSecrets.org</p></div>
+  <div class="box"><div class="sl">The Revolving Door</div><div id="revolving-door"></div></div>
+
+</main>
+<footer class="footer">
+  <div class="fl">HIGH-SPEED FAIL</div>
+  <div class="ft">Built from public records · California High-Speed Rail Authority · hsr.ca.gov<br>Data from official CAHSR financial reports, Active Contract Reports, board minutes, construction updates, FEC filings, OpenSecrets.org, and CA Secretary of State CAL-ACCESS.<br>Nonpartisan public accountability project. All figures nominal USD unless noted.</div>
+  <div class="flinks">
+    <a href="https://hsr.ca.gov/about/transparency-accountability/funding/" class="flink" target="_blank" rel="noopener noreferrer">Source Data</a>
+    <a href="https://hsr.ca.gov/wp-content/uploads/2026/02/2026-HSR-Draft-Business-Plan-02282026.pdf" class="flink" target="_blank" rel="noopener noreferrer">2026 Business Plan</a>
+    <a href="https://buildhsr.com" class="flink" target="_blank" rel="noopener noreferrer">Build HSR Progress</a>
+    <a href="https://www.opensecrets.org" class="flink" target="_blank" rel="noopener noreferrer">OpenSecrets</a>
+    <a href="https://powersearch.sos.ca.gov/" class="flink" target="_blank" rel="noopener noreferrer">CA SOS CAL-ACCESS</a>
+    <a href="https://www.fec.gov/data/" class="flink" target="_blank" rel="noopener noreferrer">FEC.gov</a>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

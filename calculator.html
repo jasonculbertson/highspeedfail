@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Share — High-Speed Fail</title>
+<meta name="description" content="Personal exposure calculator.">
+<meta property="og:title" content="Your Share — High-Speed Fail">
+<meta property="og:description" content="Personal exposure calculator.">
+<link rel="stylesheet" href="css/site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sbar">
+  <div class="sbar-t">Share this investigation</div>
+  <div style="display:flex;gap:8px">
+    <button type="button" class="sbtn" onclick="shareX()">𝕏 Post</button>
+  </div>
+</div>
+<nav class="site-nav" aria-label="Sections"><div class="site-nav-inner">
+<a class="site-brand" href="index.html">HIGH-SPEED FAIL</a>
+<div class="site-nav-links">
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="spending.html">Spending</a>
+<a class="nav-link" href="vendors.html">Vendors</a>
+<a class="nav-link" href="flags.html">Flags</a>
+<a class="nav-link" href="board.html">Board</a>
+<a class="nav-link" href="promises.html">Promises</a>
+<a class="nav-link" href="connections.html">Connections</a>
+<a class="nav-link" href="timeline.html">Timeline</a>
+<a class="nav-link" href="progress.html">Progress</a>
+<a class="nav-link" href="compare.html">Global</a>
+<a class="nav-link" href="waste.html">Waste</a>
+<a class="nav-link is-active" href="calculator.html">Your Share</a>
+<a class="nav-link nav-breaking" href="breaking.html">Breaking</a>
+</div></div></nav>
+<main class="main">
+
+  <div class="shed">Your Share of the Bill</div>
+  <p class="sdek">Every California taxpayer is on the hook for this project. Enter your details to see your personal exposure — based on state income tax revenue distribution and population figures.</p>
+  <div class="box" style="max-width:560px;margin-bottom:24px">
+    <div class="sl">Calculate Your Share</div>
+    <div style="margin-bottom:14px">
+      <label style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px">Annual Household Income</label>
+      <select id="calc-income" style="width:100%;padding:10px;font-family:var(--mono);font-size:13px;border:1px solid var(--news);background:var(--paper);color:var(--ink);border-radius:2px" onchange="calcShare()">
+        <option value="30000">Under $40,000</option>
+        <option value="60000" selected>$40,000 – $80,000</option>
+        <option value="100000">$80,000 – $120,000</option>
+        <option value="160000">$120,000 – $200,000</option>
+        <option value="300000">$200,000 – $400,000</option>
+        <option value="600000">$400,000+</option>
+      </select>
+    </div>
+    <div style="margin-bottom:14px">
+      <label style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px">Years You've Lived in California</label>
+      <select id="calc-years" style="width:100%;padding:10px;font-family:var(--mono);font-size:13px;border:1px solid var(--news);background:var(--paper);color:var(--ink);border-radius:2px" onchange="calcShare()">
+        <option value="1">1–2 years</option>
+        <option value="5">3–5 years</option>
+        <option value="8">6–10 years</option>
+        <option value="12" selected>11–15 years</option>
+        <option value="20">16–25 years</option>
+        <option value="30">25+ years</option>
+      </select>
+    </div>
+    <div style="margin-bottom:14px">
+      <label style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px">Future Cost Scenario</label>
+      <select id="calc-scenario" style="width:100%;padding:10px;font-family:var(--mono);font-size:13px;border:1px solid var(--news);background:var(--paper);color:var(--ink);border-radius:2px" onchange="calcShare()">
+        <option value="89">Low — $89B total</option>
+        <option value="108" selected>Current Estimate — $108B total</option>
+        <option value="128">High Estimate — $128B total</option>
+      </select>
+    </div>
+  </div>
+  <div id="calc-result"></div>
+  <div class="cgrid" style="margin-top:22px">
+    <div class="cbox"><div class="ct">Cost Distribution by Income Bracket (% of CA income tax)</div><div style="height:220px;position:relative"><canvas id="calcChart"></canvas></div></div>
+    <div class="cbox"><div class="ct">Per-Taxpayer Cost — Historical vs. Projected</div><div style="height:220px;position:relative"><canvas id="calcHistory"></canvas></div></div>
+  </div>
+  <div class="box"><div class="sl">What The Same Money Could Have Built For You</div><div id="alt-spending"></div></div>
+
+</main>
+<footer class="footer">
+  <div class="fl">HIGH-SPEED FAIL</div>
+  <div class="ft">Built from public records · California High-Speed Rail Authority · hsr.ca.gov<br>Data from official CAHSR financial reports, Active Contract Reports, board minutes, construction updates, FEC filings, OpenSecrets.org, and CA Secretary of State CAL-ACCESS.<br>Nonpartisan public accountability project. All figures nominal USD unless noted.</div>
+  <div class="flinks">
+    <a href="https://hsr.ca.gov/about/transparency-accountability/funding/" class="flink" target="_blank" rel="noopener noreferrer">Source Data</a>
+    <a href="https://hsr.ca.gov/wp-content/uploads/2026/02/2026-HSR-Draft-Business-Plan-02282026.pdf" class="flink" target="_blank" rel="noopener noreferrer">2026 Business Plan</a>
+    <a href="https://buildhsr.com" class="flink" target="_blank" rel="noopener noreferrer">Build HSR Progress</a>
+    <a href="https://www.opensecrets.org" class="flink" target="_blank" rel="noopener noreferrer">OpenSecrets</a>
+    <a href="https://powersearch.sos.ca.gov/" class="flink" target="_blank" rel="noopener noreferrer">CA SOS CAL-ACCESS</a>
+    <a href="https://www.fec.gov/data/" class="flink" target="_blank" rel="noopener noreferrer">FEC.gov</a>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

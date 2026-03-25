@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overview — High-Speed Fail</title>
+<meta name="description" content="California HSR accountability — key numbers and findings.">
+<meta property="og:title" content="Overview — High-Speed Fail">
+<meta property="og:description" content="California HSR accountability — key numbers and findings.">
+<link rel="stylesheet" href="css/site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sbar">
+  <div class="sbar-t">Share this investigation</div>
+  <div style="display:flex;gap:8px">
+    <button class="sbtn" onclick="shareX()">𝕏 Post</button>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hk">Investigation · California High-Speed Rail · Public Accountability</div>
+  <div class="ht">HIGH-SPEED FAIL</div>
+  <div class="hs">California promised a bullet train by 2028.<br>A decade later, not one passenger has ridden it.</div>
+  <div class="hd">$13.8 billion spent. 554+ change orders. $540M+ in flagged waste. Board members with industry conflicts. A full accountability investigation built from public records.</div>
+  <div class="hst">
+    <div><div class="hsv">$13.8B</div><div class="hsl">Spent to Date</div></div>
+    <div class="hdiv"></div>
+    <div><div class="hsv">$4.0B+</div><div class="hsl">Over Budget</div></div>
+    <div class="hdiv"></div>
+    <div><div class="hsv">0</div><div class="hsl">Passengers Carried</div></div>
+    <div class="hdiv"></div>
+    <div class="hst-pair">
+      <div>
+        <div class="hsv">2039+</div>
+        <div class="hsl">Earliest Completion</div>
+      </div>
+      <div class="hdiv"></div>
+      <div>
+        <div class="hsv" id="page-counter">$0</div>
+        <div class="hsl">Spent Since Page Loaded</div>
+        <div class="hst-counter-sub">at ~$4.65M/day ($53.8/sec)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="site-nav" aria-label="Sections"><div class="site-nav-inner">
+<a class="site-brand" href="index.html">HIGH-SPEED FAIL</a>
+<div class="site-nav-links">
+<a class="nav-link is-active" href="index.html">Overview</a>
+<a class="nav-link" href="spending.html">Spending</a>
+<a class="nav-link" href="vendors.html">Vendors</a>
+<a class="nav-link" href="flags.html">Flags</a>
+<a class="nav-link" href="board.html">Board</a>
+<a class="nav-link" href="promises.html">Promises</a>
+<a class="nav-link" href="connections.html">Connections</a>
+<a class="nav-link" href="timeline.html">Timeline</a>
+<a class="nav-link" href="progress.html">Progress</a>
+<a class="nav-link" href="compare.html">Global</a>
+<a class="nav-link" href="waste.html">Waste</a>
+<a class="nav-link" href="calculator.html">Your Share</a>
+<a class="nav-link nav-breaking" href="breaking.html">Breaking</a>
+</div></div></nav>
+<main class="main">
+
+  <div style="margin-bottom:24px"><div class="shed">The Numbers Don't Lie</div><p class="sdek">California voters approved Proposition 1A in 2008, authorizing a high-speed rail system connecting SF to LA in under 3 hours for an original cost of $33B with trains running by 2020. Here's the reality.</p></div>
+  <div class="sg">
+    <div class="sc r"><div class="sv">$13.8B</div><div class="sk">Total Spent 2015–2025</div><div class="ss">Funds 276,000 teachers for one year</div></div>
+    <div class="sc r"><div class="sv">$4.0B+</div><div class="sk">Over Original Contracts</div><div class="ss">Across tracked vendor contracts</div></div>
+    <div class="sc g"><div class="sv">554+</div><div class="sk">Change Orders</div><div class="ss">On just 3 design-build packages</div></div>
+    <div class="sc k"><div class="sv">$540M+</div><div class="sk">Flagged Waste (min)</div><div class="ss">Conservative documented estimate</div></div>
+    <div class="sc r"><div class="sv">$128B</div><div class="sk">High Estimate, Phase 1</div><div class="ss">Up from $33B in 2008 (+288%)</div></div>
+    <div class="sc g"><div class="sv">9/9</div><div class="sk">Board Members Appointed</div><div class="ss">5 by Governor, 2 Senate, 2 Assembly</div></div>
+    <div class="sc k"><div class="sv">80mi</div><div class="sk">Guideway Complete</div><div class="ss">Of 494-mile Phase 1 total</div></div>
+    <div class="sc gr"><div class="sv">16,400</div><div class="sk">Jobs Created</div><div class="ss">70%+ filled by Central Valley residents</div></div>
+  </div>
+  <div class="cgrid">
+    <div class="cbox"><div class="ct">Cost Estimate Evolution 2008–2024 ($B)</div><div style="height:210px;position:relative"><canvas id="costEvo"></canvas></div></div>
+    <div class="cbox"><div class="ct">Spend Categories — % Over Budget</div><div style="height:210px;position:relative"><canvas id="radarOver"></canvas></div></div>
+  </div>
+  <div class="box"><div class="sl">Key Findings</div><div id="ov-findings"></div></div>
+  <div class="callout"><div class="cn">$250M</div><div class="cl">Cost Per Mile — CAHSR Trajectory</div><div class="cb">Japan built the original Shinkansen at $15M per mile. Spain's AVE: $25M per mile. California is tracking at $250M per mile — 10 to 17× higher. Among the most expensive rail projects ever built on Earth.</div></div>
+  <div class="box" style="margin-top:20px"><div class="sl">Where Does $1 Spent Go?</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:2px;background:var(--news)">
+    <div style="background:white;padding:13px;text-align:center"><div style="font-family:var(--hed);font-size:26px;color:var(--red)">$0.54</div><div style="font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--muted);margin-top:3px">CONSTRUCTION</div></div>
+    <div style="background:white;padding:13px;text-align:center"><div style="font-family:var(--hed);font-size:26px;color:var(--ora)">$0.15</div><div style="font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--muted);margin-top:3px">RIGHT-OF-WAY</div></div>
+    <div style="background:white;padding:13px;text-align:center"><div style="font-family:var(--hed);font-size:26px;color:var(--gold)">$0.09</div><div style="font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--muted);margin-top:3px">MANAGEMENT</div></div>
+    <div style="background:white;padding:13px;text-align:center"><div style="font-family:var(--hed);font-size:26px;color:var(--smoke)">$0.07</div><div style="font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--muted);margin-top:3px">ENGINEERING</div></div>
+    <div style="background:white;padding:13px;text-align:center"><div style="font-family:var(--hed);font-size:26px;color:var(--red)">$0.08</div><div style="font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--muted);margin-top:3px">LEGAL / ENV.</div></div>
+    <div style="background:white;padding:13px;text-align:center"><div style="font-family:var(--hed);font-size:26px;color:var(--red)">$0.07</div><div style="font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--muted);margin-top:3px">ADMIN / OTHER</div></div>
+  </div></div>
+
+</main>
+<footer class="footer">
+  <div class="fl">HIGH-SPEED FAIL</div>
+  <div class="ft">Built from public records · California High-Speed Rail Authority · hsr.ca.gov<br>Data from official CAHSR financial reports, Active Contract Reports, board minutes, construction updates, FEC filings, OpenSecrets.org, and CA Secretary of State CAL-ACCESS.<br>Nonpartisan public accountability project. All figures nominal USD unless noted.</div>
+  <div class="flinks">
+    <a href="https://hsr.ca.gov/about/transparency-accountability/funding/" class="flink" target="_blank" rel="noopener noreferrer">Source Data</a>
+    <a href="https://hsr.ca.gov/wp-content/uploads/2026/02/2026-HSR-Draft-Business-Plan-02282026.pdf" class="flink" target="_blank" rel="noopener noreferrer">2026 Business Plan</a>
+    <a href="https://buildhsr.com" class="flink" target="_blank" rel="noopener noreferrer">Build HSR Progress</a>
+    <a href="https://www.opensecrets.org" class="flink" target="_blank" rel="noopener noreferrer">OpenSecrets</a>
+    <a href="https://powersearch.sos.ca.gov/" class="flink" target="_blank" rel="noopener noreferrer">CA SOS CAL-ACCESS</a>
+    <a href="https://www.fec.gov/data/" class="flink" target="_blank" rel="noopener noreferrer">FEC.gov</a>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

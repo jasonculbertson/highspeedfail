@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Flags — High-Speed Fail</title>
+<meta name="description" content="Eight accountability patterns from public records.">
+<meta property="og:title" content="Red Flags — High-Speed Fail">
+<meta property="og:description" content="Eight accountability patterns from public records.">
+<link rel="stylesheet" href="css/site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sbar">
+  <div class="sbar-t">Share this investigation</div>
+  <div style="display:flex;gap:8px">
+    <button type="button" class="sbtn" onclick="shareX()">𝕏 Post</button>
+  </div>
+</div>
+<nav class="site-nav" aria-label="Sections"><div class="site-nav-inner">
+<a class="site-brand" href="index.html">HIGH-SPEED FAIL</a>
+<div class="site-nav-links">
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="spending.html">Spending</a>
+<a class="nav-link" href="vendors.html">Vendors</a>
+<a class="nav-link is-active" href="flags.html">Flags</a>
+<a class="nav-link" href="board.html">Board</a>
+<a class="nav-link" href="promises.html">Promises</a>
+<a class="nav-link" href="connections.html">Connections</a>
+<a class="nav-link" href="timeline.html">Timeline</a>
+<a class="nav-link" href="progress.html">Progress</a>
+<a class="nav-link" href="compare.html">Global</a>
+<a class="nav-link" href="waste.html">Waste</a>
+<a class="nav-link" href="calculator.html">Your Share</a>
+<a class="nav-link nav-breaking" href="breaking.html">Breaking</a>
+</div></div></nav>
+<main class="main">
+
+  <div class="shed">Red Flags</div>
+  <p class="sdek">Eight patterns surfaced from official CAHSR public records. Transparency observations from public data — not allegations of criminal wrongdoing. Total estimated recoverable: <strong>$539.6M+</strong></p>
+  <div class="cgrid">
+    <div class="cbox"><div class="ct">Estimated Recoverable Waste by Flag ($M)</div><div style="height:210px;position:relative"><canvas id="wByFlag"></canvas></div></div>
+    <div class="cbox"><div class="ct">Flag Severity Distribution</div><div style="height:210px;position:relative"><canvas id="sevPie"></canvas></div></div>
+  </div>
+  <div class="callout"><div class="cn">$22.3M</div><div class="cl">Paid to 3 IT Vendors on $10.9M in Contracts</div><div class="cb">AbleGov Inc., Advanced Technical Solutions, and Allied Network Solutions: same package, near-identical structures, 100–112% overruns, 4–9 amendments each. Classic bid-splitting fraud signature.</div></div>
+  <div class="sl" style="margin-top:22px">All Flags — Detail</div>
+  <div id="flag-cards"></div>
+  <div class="box" style="margin-top:22px"><div class="sl">File a Public Records Act Request</div><p style="font-size:13px;color:var(--smoke);line-height:1.7">California's CPRA gives any member of the public the right to inspect public agency records. Send to: <strong><a href="mailto:info@hsr.ca.gov">info@hsr.ca.gov</a></strong> or by mail: California High-Speed Rail Authority, 770 L Street, Suite 1180, Sacramento, CA 95814. Agency has 10 business days to respond.</p></div>
+
+</main>
+<footer class="footer">
+  <div class="fl">HIGH-SPEED FAIL</div>
+  <div class="ft">Built from public records · California High-Speed Rail Authority · hsr.ca.gov<br>Data from official CAHSR financial reports, Active Contract Reports, board minutes, construction updates, FEC filings, OpenSecrets.org, and CA Secretary of State CAL-ACCESS.<br>Nonpartisan public accountability project. All figures nominal USD unless noted.</div>
+  <div class="flinks">
+    <a href="https://hsr.ca.gov/about/transparency-accountability/funding/" class="flink" target="_blank" rel="noopener noreferrer">Source Data</a>
+    <a href="https://hsr.ca.gov/wp-content/uploads/2026/02/2026-HSR-Draft-Business-Plan-02282026.pdf" class="flink" target="_blank" rel="noopener noreferrer">2026 Business Plan</a>
+    <a href="https://buildhsr.com" class="flink" target="_blank" rel="noopener noreferrer">Build HSR Progress</a>
+    <a href="https://www.opensecrets.org" class="flink" target="_blank" rel="noopener noreferrer">OpenSecrets</a>
+    <a href="https://powersearch.sos.ca.gov/" class="flink" target="_blank" rel="noopener noreferrer">CA SOS CAL-ACCESS</a>
+    <a href="https://www.fec.gov/data/" class="flink" target="_blank" rel="noopener noreferrer">FEC.gov</a>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
