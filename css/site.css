@@ -135,8 +135,12 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .vg{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:7px;margin:9px 0}
 @media(max-width:480px){.vg{grid-template-columns:1fr 1fr}}
 .vmi{background:var(--paper);padding:6px 9px}
-.vml{font-family:var(--mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
-.vmv{font-family:var(--mono);font-size:12px;margin-top:2px;font-weight:600}
+.vml{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.vmv{font-family:var(--mono);font-size:14px;margin-top:2px;font-weight:600}
+/* Filter selects */
+.filter-select{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--smoke);background:white;border:1px solid var(--news);padding:7px 32px 7px 12px;border-radius:2px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235c5449'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;transition:border-color .15s}
+.filter-select:hover{border-color:var(--smoke)}
+.filter-select:focus{outline:2px solid var(--red);outline-offset:2px;border-color:var(--red)}
 .vflg{display:flex;gap:5px;flex-wrap:wrap;margin:5px 0}
 .vnote{font-size:13px;color:var(--smoke);line-height:1.6;margin-top:6px;border-top:1px solid var(--news);padding-top:7px}
 .chip{display:inline-block;padding:2px 6px;font-family:var(--mono);font-size:8px;letter-spacing:1px;text-transform:uppercase;border:1px solid;border-radius:2px;white-space:nowrap}

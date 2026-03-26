@@ -63,8 +63,27 @@
   <div class="shed">Who Got Paid</div>
   <p class="sdek">337 active contracts totaling over $14B. Below are the 15 highest-profile vendors sourced from CAHSR's public Active Contract Reports.</p>
   <div class="cbox" style="margin-bottom:20px"><div class="ct">Top Vendors — Contract Value vs. Amount Paid ($M)</div><div style="height:260px;position:relative"><canvas id="vBar"></canvas></div></div>
-  <div class="fb" id="risk-filters"></div>
-  <div class="fb" id="sort-filters"></div>
+  <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:center;margin-bottom:18px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <label for="risk-filter" style="font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Risk</label>
+      <select id="risk-filter" class="filter-select" onchange="setVF(this.value)">
+        <option value="all">All</option>
+        <option value="critical">Critical</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <label for="sort-filter" style="font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Sort by</label>
+      <select id="sort-filter" class="filter-select" onchange="setVS(this.value)">
+        <option value="paid">Amount Paid</option>
+        <option value="overrun">Overrun %</option>
+        <option value="amendments">Amendments</option>
+        <option value="changeOrders">Change Orders</option>
+      </select>
+    </div>
+  </div>
   <div id="vendor-list"></div>
   <div class="boxd" style="margin-top:18px">
     <div style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#9a9080;margin-bottom:11px">Change Order Density — Design-Build Packages</div>
