@@ -119,8 +119,8 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .sc.r::before{background:var(--red)}.sc.g::before{background:var(--gold)}.sc.k::before{background:var(--ink)}.sc.gr::before{background:var(--grn)}
 .sv{font-family:var(--hed);font-size:clamp(22px,4.5vw,32px);line-height:1;letter-spacing:1px}
 .sc.r .sv{color:var(--red)}.sc.g .sv{color:var(--gold)}.sc.k .sv{color:var(--ink)}.sc.gr .sv{color:var(--grn)}
-.sk{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.ss{font-size:11px;color:var(--smoke);margin-top:2px;line-height:1.4}
+.sk{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.ss{font-size:13px;color:var(--smoke);margin-top:4px;line-height:1.5}
 /* BOXES */
 .box{border:1px solid var(--news);padding:18px;background:white;margin-bottom:18px}
 .boxd{background:var(--ink);color:var(--paper);padding:18px;margin-bottom:18px}
