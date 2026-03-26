@@ -268,3 +268,43 @@ if(document.getElementById('calc-income'))setTimeout(calcShare,200);
 setTimeout(initCharts,50);
 }
 runPageInit();
+
+// ── TOP NAV ──
+(function(){
+  // Mark active links by current page
+  const page = document.body.dataset.page;
+  if(page){
+    document.querySelectorAll('[data-page]').forEach(el => {
+      if(el.dataset.page === page) el.classList.add('is-active');
+    });
+  }
+  // Dropdown toggles (click)
+  document.querySelectorAll('.nav-dropdown').forEach(dd => {
+    const trigger = dd.querySelector('.nav-dd-trigger');
+    if(!trigger) return;
+    trigger.addEventListener('click', e => {
+      e.stopPropagation();
+      const isOpen = dd.classList.contains('is-open');
+      document.querySelectorAll('.nav-dropdown.is-open').forEach(d => d.classList.remove('is-open'));
+      if(!isOpen) dd.classList.add('is-open');
+    });
+  });
+  // Close dropdowns on outside click
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown.is-open').forEach(d => d.classList.remove('is-open'));
+  });
+  // Keyboard: close on Escape
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape') document.querySelectorAll('.nav-dropdown.is-open').forEach(d => d.classList.remove('is-open'));
+  });
+  // Mobile hamburger toggle
+  const toggle = document.getElementById('nav-mobile-toggle');
+  const menu = document.getElementById('top-nav-menu');
+  if(toggle && menu){
+    toggle.addEventListener('click', e => {
+      e.stopPropagation();
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+})();
