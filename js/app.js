@@ -236,7 +236,7 @@ const OV_FINDINGS=[
 ];
 function renderOvFindings(){
   const el=document.getElementById('ov-findings');if(!el)return;
-  el.innerHTML=OV_FINDINGS.map((it,i)=>`<div class="finding-item" onclick="openFindingModal(${i})" role="button" tabindex="0" aria-label="Read more about: ${it.t}"><span style="color:${SC[it.s]||'#c82929'};flex-shrink:0;margin-top:3px;font-size:13px">▸</span><span class="finding-item-text">${it.t}</span><span class="finding-item-more">Details →</span></div>`).join('');
+  el.innerHTML=OV_FINDINGS.map((it,i)=>`<div class="finding-item" onclick="openFindingModal(${i})" role="button" tabindex="0" aria-label="Read more about: ${it.t}"><div style="color:${SC[it.s]||'#c82929'};flex-shrink:0;margin-top:2px;font-size:12px;line-height:1.4">▸</div><div class="finding-item-text">${it.t}</div><div class="finding-item-more">Details →</div></div>`).join('');
   el.querySelectorAll('.finding-item').forEach(el=>el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')el.click();}));
 }
 function openFindingModal(i){
