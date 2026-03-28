@@ -60,8 +60,28 @@
 </a>
 <main class="main">
 
-  <div class="shed">Follow the Connections</div>
-  <p class="sdek">Who runs these companies, who owns them, and who they've paid. All data from FEC filings, OpenSecrets, and California Secretary of State disclosures.</p>
+  <div style="border-left:4px solid #b8832a;padding:18px 22px;margin-bottom:24px;background:#fdfaf3">
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Chapter 2 of 11 · Political Relationships</div>
+    <div class="shed" style="margin-bottom:8px">THE CONNECTIONS</div>
+    <p style="font-family:var(--dis);font-size:clamp(15px,2vw,18px);color:var(--smoke);line-height:1.8;font-style:italic;margin:0">Before the first contract was awarded, the relationships were already in place. A senator's husband held a controlling stake in the company that would win billions in federal and state work. A board member who ran the contractors' trade association would vote on their payouts. A $25,000 donation arrived during a contract renegotiation. We are not alleging corruption. These are the documented facts.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;background:var(--news);margin-bottom:24px">
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:#b8832a;line-height:1;letter-spacing:1px">$759M</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">MILCON Contracts</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Approved while senator's husband held stake</div>
+    </div>
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:#b8832a;line-height:1;letter-spacing:1px">$25K</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Newsom Donation</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Tutor Perini · same month as CP1 renegotiation</div>
+    </div>
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:#b8832a;line-height:1;letter-spacing:1px">4</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Board Conflicts</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Members with direct industry ties · none required to recuse</div>
+    </div>
+  </div>
   <div style="border:1px solid #c09020;background:#fdfcf3;padding:12px 16px;margin-bottom:22px;border-left:4px solid #c09020"><div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c09020;margin-bottom:5px">Disclaimer</div><p style="font-size:12px;color:var(--smoke);line-height:1.55">Political contributions and lobbying are legal. Their disclosure here is for public accountability. Connections between contractors and politicians do not imply corruption. Readers draw their own conclusions.</p></div>
   <div class="cbox" style="margin-bottom:20px"><div class="ct">Federal Lobbying Spend — Key Vendors (Annual, $000s)</div><div style="height:240px;position:relative"><canvas id="lobbyChart"></canvas></div></div>
   <div class="cgrid">
@@ -81,6 +101,16 @@
   <div id="vendor-profiles"></div>
   <div class="box" style="margin-top:22px"><div class="sl">Notable Political Donations — Timeline</div><div id="donations-timeline"></div><p style="font-size:11px;color:var(--muted);margin-top:10px;font-family:var(--mono);letter-spacing:.5px">Sources: CA SOS CAL-ACCESS · FEC.gov · OpenSecrets.org</p></div>
   <div class="box"><div class="sl">The Revolving Door</div><div id="revolving-door"></div></div>
+
+  <!-- NEXT CHAPTER -->
+  <div style="margin-top:28px;padding:22px 26px;background:var(--char);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#5c5449;margin-bottom:6px">Chapter 3 →</div>
+      <div style="font-family:var(--hed);font-size:28px;color:#ede0d0;letter-spacing:1px;line-height:1;margin-bottom:6px">THE WATCHDOGS</div>
+      <div style="font-size:13px;color:#7a6a5a;line-height:1.55">Nine people are supposed to guard your money. All nine voted yes — in secret — on the largest single payout in the project's history. Not one recused.</div>
+    </div>
+    <a href="board.html" style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c09020;text-decoration:none;border:1px solid rgba(192,144,32,.3);padding:11px 22px;white-space:nowrap;background:rgba(192,144,32,.07)">Meet the board →</a>
+  </div>
 
 </main>
 <footer class="footer">

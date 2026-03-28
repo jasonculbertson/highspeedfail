@@ -60,8 +60,28 @@
 </a>
 <main class="main">
 
-  <div class="shed">The Board of Directors</div>
-  <p class="sdek">Nine members vote to approve all major contracts, change orders, and spending decisions. Five appointed by the Governor. Two by the Senate. Two by the Assembly. Here's who they are — and what they bring with them.</p>
+  <div style="border-left:4px solid #c09020;padding:18px 22px;margin-bottom:24px;background:#fdfcf3">
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Chapter 3 of 11 · Who's Watching the Money</div>
+    <div class="shed" style="margin-bottom:8px">THE WATCHDOGS</div>
+    <p style="font-family:var(--dis);font-size:clamp(15px,2vw,18px);color:var(--smoke);line-height:1.8;font-style:italic;margin:0">Nine people are supposed to make sure your money is well spent. One of them runs the trade association that represents the contractors getting paid. Two are real estate developers acquiring land in the project corridor. On January 21, 2026, all nine voted yes — unanimously, in a closed session — on the largest single payout in the project's history. Not one board member recused. This is who they are.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;background:var(--news);margin-bottom:24px">
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:#c09020;line-height:1;letter-spacing:1px">9 of 9</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Voted Yes</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Unanimous · zero dissent · closed session</div>
+    </div>
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:#c09020;line-height:1;letter-spacing:1px">$537M</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Approved in Secret</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">No public deliberation · no disclosed rationale</div>
+    </div>
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:#c09020;line-height:1;letter-spacing:1px">0</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Recusals</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Despite direct industry conflicts on the board</div>
+    </div>
+  </div>
   <div class="cgrid">
     <div class="cbox"><div class="ct">Board Composition — Who Appointed Them</div><div style="height:200px;position:relative"><canvas id="boardPie"></canvas></div></div>
     <div class="cbox"><div class="ct">Board Member Industry Background</div><div style="height:200px;position:relative"><canvas id="boardBg"></canvas></div></div>
@@ -75,6 +95,16 @@
   <div class="box" style="margin-top:20px">
     <div class="sl">CEO History — The Revolving Door</div>
     <div id="ceo-history"></div>
+  </div>
+
+  <!-- NEXT CHAPTER -->
+  <div style="margin-top:28px;padding:22px 26px;background:var(--char);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#5c5449;margin-bottom:6px">Chapter 4 →</div>
+      <div style="font-family:var(--hed);font-size:28px;color:#ede0d0;letter-spacing:1px;line-height:1;margin-bottom:6px">FOLLOW THE MONEY</div>
+      <div style="font-size:13px;color:#7a6a5a;line-height:1.55">$13.8 billion spent. Every single spending category over budget. Not one exception. $4.65 million goes out the door every day — with no train running.</div>
+    </div>
+    <a href="spending.html" style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);text-decoration:none;border:1px solid rgba(200,41,41,.3);padding:11px 22px;white-space:nowrap;background:rgba(200,41,41,.07)">See the spending →</a>
   </div>
 
 </main>

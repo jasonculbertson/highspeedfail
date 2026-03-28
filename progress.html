@@ -60,14 +60,44 @@
 </a>
 <main class="main">
 
-  <div class="shed">What's Actually Built</div>
-  <p class="sdek">After $13.8B and 10 years, here is the physical state of the project as of December 2025.</p>
+  <div style="border-left:4px solid #1e7e3e;padding:18px 22px;margin-bottom:24px;background:#f3faf5">
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Chapter 10 of 11 · What Exists</div>
+    <div class="shed" style="margin-bottom:8px">WHAT'S ACTUALLY BUILT</div>
+    <p style="font-family:var(--dis);font-size:clamp(15px,2vw,18px);color:var(--smoke);line-height:1.8;font-style:italic;margin:0">You can drive to the Central Valley today and see the concrete. Pillars rising from farmland between Madera and Bakersfield. Eight years of construction, $13.8 billion spent, and what exists is 80 miles of guideway structure — with no track on it. No trains have been ordered. The segment under construction connects Merced and Bakersfield, two cities that together represent less than 1% of California's economic output and were not mentioned in Prop 1A's description of the project.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;background:var(--news);margin-bottom:24px">
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:#1e7e3e;line-height:1;letter-spacing:1px">80 mi</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Guideway Structure</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Concrete pylons · no track installed yet</div>
+    </div>
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:var(--red);line-height:1;letter-spacing:1px">16%</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Of Phase 1 Done</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">After $13.8B · remaining 84% needs ~$72B more</div>
+    </div>
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:var(--red);line-height:1;letter-spacing:1px">0</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Trainsets Ordered</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Procurement missed Dec 2024 deadline · restarted</div>
+    </div>
+  </div>
   <div class="cgrid">
     <div class="cbox"><div class="ct">Phase 1 Route — Completion by Segment (%)</div><div style="height:250px;position:relative"><canvas id="routeProg"></canvas></div></div>
     <div class="cbox"><div class="ct">Construction Structures Complete</div><div style="height:250px;position:relative"><canvas id="structChart"></canvas></div></div>
   </div>
   <div class="box"><div class="sl">Construction Progress — By Segment</div><div id="prog-segs"></div></div>
   <div class="callout"><div class="cn">16%</div><div class="cl">of Phase 1 Guideway Complete After $13.8B Spent</div><div class="cb">The project's own 2026 Business Plan acknowledges it does not have sufficient committed funding to complete Phase 1. At this rate, the remaining 84% would cost approximately $72B more — assuming no further increases.</div></div>
+
+  <!-- NEXT CHAPTER -->
+  <div style="margin-top:28px;padding:22px 26px;background:var(--char);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#5c5449;margin-bottom:6px">Chapter 11 — The Final Word →</div>
+      <div style="font-family:var(--hed);font-size:28px;color:#ede0d0;letter-spacing:1px;line-height:1;margin-bottom:6px">THE VERDICT</div>
+      <div style="font-size:13px;color:#7a6a5a;line-height:1.55">Japan built its bullet train for $14M per mile — on time, in 1964. China: $40M per mile. California: $250M per mile. The global comparison is the final word.</div>
+    </div>
+    <a href="compare.html" style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4a6a8a;text-decoration:none;border:1px solid rgba(74,106,138,.3);padding:11px 22px;white-space:nowrap;background:rgba(74,106,138,.07)">Read the verdict →</a>
+  </div>
 
 </main>
 <footer class="footer">

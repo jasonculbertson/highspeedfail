@@ -87,57 +87,125 @@
 </section>
 <main class="main">
 
-  <div style="margin-bottom:24px"><div class="shed">The Numbers Don't Lie</div><p class="sdek">California voters approved Proposition 1A in 2008, authorizing a high-speed rail system connecting SF to LA in under 3 hours for an original cost of $33B with trains running by 2020. Here's the reality.</p></div>
-  <div class="sg">
-    <div class="sc r"><div class="sv">$13.8B</div><div class="sk">Total Spent 2015–2025</div><div class="ss">Funds 276,000 teachers for one year</div></div>
-    <div class="sc r"><div class="sv">$4.0B+</div><div class="sk">Over Original Contracts</div><div class="ss">Across tracked vendor contracts</div></div>
-    <div class="sc g"><div class="sv">554+</div><div class="sk">Change Orders</div><div class="ss">On just 3 design-build packages</div></div>
-    <div class="sc k"><div class="sv">$540M+</div><div class="sk">Flagged Waste (min)</div><div class="ss">Conservative documented estimate</div></div>
-    <div class="sc r"><div class="sv">$128B</div><div class="sk">High Estimate, Phase 1</div><div class="ss">Up from $33B in 2008 (+288%)</div></div>
-    <div class="sc k"><div class="sv">80mi</div><div class="sk">Guideway Complete</div><div class="ss">Of 494-mile Phase 1 total</div></div>
+  <!-- STORY LEDE -->
+  <div style="border-left:4px solid var(--red);padding:18px 22px;margin-bottom:28px;background:#fdfaf7">
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:10px">Investigation Overview · Updated March 2026</div>
+    <p style="font-family:var(--dis);font-size:clamp(16px,2.2vw,19px);color:var(--ink);line-height:1.85;font-style:italic;margin:0">In November 2008, 53% of California voters approved a bond to build a bullet train from San Francisco to Los Angeles by 2020, for $33 billion, with no taxpayer subsidy required. That train does not exist. It has never carried a passenger. The cost estimate is now $128 billion. The deadline is 2039, at best. The FBI has been asked to investigate. And the week a $537 million payment was quietly approved in a closed session, the legislature passed a law restricting what the project's own Inspector General can tell the public.</p>
   </div>
-  <div class="cgrid">
-    <div class="cbox"><div class="ct">Cost Estimate Evolution 2008–2024 ($B)</div><div style="height:210px;position:relative"><canvas id="costEvo"></canvas></div></div>
-    <div class="cbox"><div class="ct">Spend Categories — % Over Budget</div><div style="height:210px;position:relative"><canvas id="radarOver"></canvas></div></div>
+
+  <!-- THREE DARK STAT BLOCKS -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;background:var(--news);margin-bottom:28px">
+    <div style="background:var(--char);padding:28px 20px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(52px,10vw,78px);color:var(--red);line-height:1;letter-spacing:2px">$13.8B</div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#5c5449;margin:10px 0 12px">Spent · Zero Passengers</div>
+      <div style="font-size:13px;color:#7a6a5a;line-height:1.65">On a train that has never carried a single paying passenger in 18 years of construction.</div>
+    </div>
+    <div style="background:var(--char);padding:28px 20px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(52px,10vw,78px);color:var(--red);line-height:1;letter-spacing:2px">$250M</div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#5c5449;margin:10px 0 12px">Per Mile of Track</div>
+      <div style="font-size:13px;color:#7a6a5a;line-height:1.65">17× more expensive than Japan's original Shinkansen. Among the most expensive rail projects in recorded history.</div>
+    </div>
+    <div style="background:var(--char);padding:28px 20px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(52px,10vw,78px);color:var(--red);line-height:1;letter-spacing:2px">$0</div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#5c5449;margin:10px 0 12px">Private Investment Raised</div>
+      <div style="font-size:13px;color:#7a6a5a;line-height:1.65">Prop 1A promised private capital would close funding gaps. Seventeen years later, not a dollar has materialized.</div>
+    </div>
   </div>
-  <div class="box"><div class="sl">Key Findings</div><div id="ov-findings"></div></div>
-  <div class="callout"><div class="cn">$250M</div><div class="cl">Cost Per Mile — CAHSR Trajectory</div><div class="cb">Japan built the original Shinkansen at $15M per mile. Spain's AVE: $25M per mile. California is tracking at $250M per mile — 10 to 17× higher. Among the most expensive rail projects ever built on Earth.</div></div>
-  <div class="box" style="margin-top:20px">
-    <div class="sl">Where Does $1 Spent Go?</div>
-    <div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:12px;letter-spacing:.5px">Per dollar of CAHSR program spending — proportional segments</div>
-    <!-- Segmented dollar bill bar -->
-    <div style="display:flex;height:90px;border-radius:3px;overflow:hidden;border:1px solid var(--news);margin-bottom:12px">
-      <div style="flex:54;background:#c82929;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:2px solid rgba(255,255,255,.2)">
-        <div style="font-family:var(--hed);font-size:22px;color:white;line-height:1">$0.54</div>
-        <div style="font-family:var(--mono);font-size:8px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:3px">Construction</div>
-      </div>
-      <div style="flex:15;background:#c05820;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:2px solid rgba(255,255,255,.2)">
-        <div style="font-family:var(--hed);font-size:17px;color:white;line-height:1">$0.15</div>
-        <div style="font-family:var(--mono);font-size:7px;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:3px">Right-of-Way</div>
-      </div>
-      <div style="flex:9;background:#b8832a;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:2px solid rgba(255,255,255,.2)">
-        <div style="font-family:var(--hed);font-size:15px;color:white;line-height:1">$0.09</div>
-        <div style="font-family:var(--mono);font-size:7px;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:2px">Mgmt</div>
-      </div>
-      <div style="flex:8;background:#8a2020;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:2px solid rgba(255,255,255,.2)">
-        <div style="font-family:var(--hed);font-size:13px;color:white;line-height:1">$0.08</div>
-      </div>
-      <div style="flex:7;background:#4a3a28;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:2px solid rgba(255,255,255,.2)">
-        <div style="font-family:var(--hed);font-size:13px;color:white;line-height:1">$0.07</div>
-      </div>
-      <div style="flex:7;background:#3a3028;display:flex;flex-direction:column;align-items:center;justify-content:center">
-        <div style="font-family:var(--hed);font-size:13px;color:white;line-height:1">$0.07</div>
-      </div>
+
+  <!-- PROMISE VS. REALITY -->
+  <div class="box" style="margin-bottom:28px">
+    <div class="sl" style="margin-bottom:4px">The Promise vs. The Reality</div>
+    <p style="font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.5px;margin-bottom:16px">Prop 1A, November 2008 — five specific commitments, measured against 2026 facts</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--news)">
+      <div style="background:#f3faf5;padding:10px 14px;font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#1e7e3e">✓ 2008 — Promised</div>
+      <div style="background:#fdf5f5;padding:10px 14px;font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--red)">✗ 2026 — Reality</div>
+      <div style="background:white;padding:13px 14px;border-bottom:1px solid var(--news)"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Total Cost</div><div style="font-family:var(--hed);font-size:22px;color:#1e7e3e;letter-spacing:1px">$33 billion</div></div>
+      <div style="background:white;padding:13px 14px;border-bottom:1px solid var(--news)"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Total Cost</div><div style="font-family:var(--hed);font-size:22px;color:var(--red);letter-spacing:1px">$128 billion+</div><div style="font-size:11px;color:var(--muted);margin-top:2px">+288% · rising every year</div></div>
+      <div style="background:white;padding:13px 14px;border-bottom:1px solid var(--news)"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Trains Running</div><div style="font-family:var(--hed);font-size:22px;color:#1e7e3e;letter-spacing:1px">By 2020</div></div>
+      <div style="background:white;padding:13px 14px;border-bottom:1px solid var(--news)"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Trains Running</div><div style="font-family:var(--hed);font-size:22px;color:var(--red);letter-spacing:1px">2039 at earliest</div><div style="font-size:11px;color:var(--muted);margin-top:2px">OIG calls it "increasingly unlikely" even then</div></div>
+      <div style="background:white;padding:13px 14px;border-bottom:1px solid var(--news)"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Route</div><div style="font-family:var(--hed);font-size:22px;color:#1e7e3e;letter-spacing:1px">San Francisco → Los Angeles</div></div>
+      <div style="background:white;padding:13px 14px;border-bottom:1px solid var(--news)"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Route</div><div style="font-family:var(--hed);font-size:22px;color:var(--red);letter-spacing:1px">Central Valley only</div><div style="font-size:11px;color:var(--muted);margin-top:2px">Merced to Bakersfield · SF and LA not connected</div></div>
+      <div style="background:white;padding:13px 14px;border-bottom:1px solid var(--news)"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Operating Subsidy</div><div style="font-family:var(--hed);font-size:22px;color:#1e7e3e;letter-spacing:1px">None required</div><div style="font-size:11px;color:var(--muted);margin-top:2px">Prop 1A, Section 2704.08 — explicit prohibition</div></div>
+      <div style="background:white;padding:13px 14px;border-bottom:1px solid var(--news)"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Operating Subsidy</div><div style="font-family:var(--hed);font-size:22px;color:var(--red);letter-spacing:1px">Cannot operate without one</div><div style="font-size:11px;color:var(--muted);margin-top:2px">FRA compliance review finding · 2025</div></div>
+      <div style="background:white;padding:13px 14px"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Private Investment</div><div style="font-family:var(--hed);font-size:22px;color:#1e7e3e;letter-spacing:1px">Would close any gaps</div></div>
+      <div style="background:white;padding:13px 14px"><div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Private Investment</div><div style="font-family:var(--hed);font-size:22px;color:var(--red);letter-spacing:1px">$0 in 17 years</div><div style="font-size:11px;color:var(--muted);margin-top:2px">State now offering public guarantees to attract capital</div></div>
     </div>
-    <!-- Legend -->
-    <div style="display:flex;flex-wrap:wrap;gap:8px 18px">
-      <div style="display:flex;align-items:center;gap:6px"><div style="width:11px;height:11px;background:#c82929;border-radius:1px;flex-shrink:0"></div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--smoke)">Construction</div></div>
-      <div style="display:flex;align-items:center;gap:6px"><div style="width:11px;height:11px;background:#c05820;border-radius:1px;flex-shrink:0"></div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--smoke)">Right-of-Way</div></div>
-      <div style="display:flex;align-items:center;gap:6px"><div style="width:11px;height:11px;background:#b8832a;border-radius:1px;flex-shrink:0"></div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--smoke)">Prog. Management</div></div>
-      <div style="display:flex;align-items:center;gap:6px"><div style="width:11px;height:11px;background:#8a2020;border-radius:1px;flex-shrink:0"></div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--smoke)">Legal / Env.</div></div>
-      <div style="display:flex;align-items:center;gap:6px"><div style="width:11px;height:11px;background:#4a3a28;border-radius:1px;flex-shrink:0"></div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--smoke)">Engineering</div></div>
-      <div style="display:flex;align-items:center;gap:6px"><div style="width:11px;height:11px;background:#3a3028;border-radius:1px;flex-shrink:0"></div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--smoke)">Admin / Other</div></div>
+    <div style="text-align:right;margin-top:10px"><a href="promises.html" style="font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--red);text-decoration:none">All 12 promises, graded →</a></div>
+  </div>
+
+  <!-- THE INVESTIGATION — CHAPTER CARDS -->
+  <div class="shed" style="margin-bottom:4px">The Investigation</div>
+  <p class="sdek" style="margin-bottom:18px">Eleven chapters built from public records, federal filings, FEC data, and California Secretary of State disclosures. Follow any thread — every page goes deeper.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:3px;background:var(--news);margin-bottom:28px">
+
+    <a href="breaking.html" style="background:#1c0e0e;padding:26px 22px;text-decoration:none;display:flex;flex-direction:column;min-height:195px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:13px">
+        <span style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--red)">Breaking</span>
+        <span style="font-family:var(--mono);font-size:8px;color:rgba(255,255,255,.18);background:#2a1212;padding:2px 8px">Mar 2026</span>
+      </div>
+      <div style="font-family:var(--hed);font-size:30px;color:#ede0d0;letter-spacing:2px;line-height:1.05;margin-bottom:8px">THE COVER-UP</div>
+      <div style="width:34px;height:2px;background:var(--red);margin-bottom:12px"></div>
+      <div style="font-size:13px;color:#7a5a50;line-height:1.65;flex:1">A secrecy bill. A $537M secret vote. An FBI request. California dropped a winning lawsuit without explanation.</div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-top:16px">Read the latest →</div>
+    </a>
+
+    <a href="connections.html" style="background:#1a120a;padding:26px 22px;text-decoration:none;display:flex;flex-direction:column;min-height:195px">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#b8832a;margin-bottom:13px">Chapter 2</div>
+      <div style="font-family:var(--hed);font-size:30px;color:#ede0d0;letter-spacing:2px;line-height:1.05;margin-bottom:8px">THE CONNECTIONS</div>
+      <div style="width:34px;height:2px;background:#b8832a;margin-bottom:12px"></div>
+      <div style="font-size:13px;color:#7a6a50;line-height:1.65;flex:1">A senator's husband held the winning contractor. The board member who runs the contractors' lobby voted on their payouts.</div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#b8832a;margin-top:16px">Follow the relationships →</div>
+    </a>
+
+    <a href="board.html" style="background:#141008;padding:26px 22px;text-decoration:none;display:flex;flex-direction:column;min-height:195px">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c09020;margin-bottom:13px">Chapter 3</div>
+      <div style="font-family:var(--hed);font-size:30px;color:#ede0d0;letter-spacing:2px;line-height:1.05;margin-bottom:8px">THE WATCHDOGS</div>
+      <div style="width:34px;height:2px;background:#c09020;margin-bottom:12px"></div>
+      <div style="font-size:13px;color:#6a6040;line-height:1.65;flex:1">Nine people approve every contract. All nine voted unanimously on the $537M secret payment. Not one recused.</div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c09020;margin-top:16px">Meet the board →</div>
+    </a>
+
+    <a href="vendors.html" style="background:#180a0a;padding:26px 22px;text-decoration:none;display:flex;flex-direction:column;min-height:195px">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:13px">Chapter 5</div>
+      <div style="font-family:var(--hed);font-size:30px;color:#ede0d0;letter-spacing:2px;line-height:1.05;margin-bottom:8px">WHO GOT PAID</div>
+      <div style="width:34px;height:2px;background:var(--red);margin-bottom:12px"></div>
+      <div style="font-size:13px;color:#7a5050;line-height:1.65;flex:1">The lowest-scoring bidder won the biggest contract. A Spanish corporation took $2.4B. Three IT vendors show patterns consistent with fraud.</div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-top:16px">See the contractors →</div>
+    </a>
+
+    <a href="promises.html" style="background:#1a1008;padding:26px 22px;text-decoration:none;display:flex;flex-direction:column;min-height:195px">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c05820;margin-bottom:13px">Chapter 8</div>
+      <div style="font-family:var(--hed);font-size:30px;color:#ede0d0;letter-spacing:2px;line-height:1.05;margin-bottom:8px">BROKEN PROMISES</div>
+      <div style="width:34px;height:2px;background:#c05820;margin-bottom:12px"></div>
+      <div style="font-size:13px;color:#7a6050;line-height:1.65;flex:1">Twelve specific commitments made to voters in 2008. Nine outright failures. Every promise about cost, timeline, or private money: broken.</div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c05820;margin-top:16px">See the scorecard →</div>
+    </a>
+
+    <a href="compare.html" style="background:#0c1018;padding:26px 22px;text-decoration:none;display:flex;flex-direction:column;min-height:195px">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#6a8aaa;margin-bottom:13px">Chapter 11</div>
+      <div style="font-family:var(--hed);font-size:30px;color:#ede0d0;letter-spacing:2px;line-height:1.05;margin-bottom:8px">THE VERDICT</div>
+      <div style="width:34px;height:2px;background:#6a8aaa;margin-bottom:12px"></div>
+      <div style="font-size:13px;color:#5a6a7a;line-height:1.65;flex:1">Japan: $14M/mile. China: $40M/mile. California: $250M/mile — and nothing running. The global comparison is the final word.</div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#6a8aaa;margin-top:16px">See global comparison →</div>
+    </a>
+
+  </div>
+
+  <!-- KEY FINDINGS -->
+  <div class="box">
+    <div class="sl">Key Findings</div>
+    <p style="font-size:14px;color:var(--smoke);line-height:1.6;margin-bottom:16px">Nine findings from our public records investigation — each documented, sourced, and clickable for the full story.</p>
+    <div id="ov-findings"></div>
+  </div>
+
+  <!-- NEXT CHAPTER -->
+  <div style="margin-top:28px;padding:22px 26px;background:var(--char);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#5c5449;margin-bottom:6px">Chapter 2 →</div>
+      <div style="font-family:var(--hed);font-size:28px;color:#ede0d0;letter-spacing:1px;line-height:1;margin-bottom:6px">THE CONNECTIONS</div>
+      <div style="font-size:13px;color:#7a6a5a;line-height:1.55">A senator's husband held the winning contractor. A board member runs the industry lobby. The relationships were in place before the first contract was awarded.</div>
     </div>
+    <a href="connections.html" style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#b8832a;text-decoration:none;border:1px solid rgba(184,131,42,.3);padding:11px 22px;white-space:nowrap;background:rgba(184,131,42,.07)">Follow the relationships →</a>
   </div>
 
 </main>

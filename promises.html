@@ -60,8 +60,28 @@
 </a>
 <main class="main">
 
-  <div class="shed">The Broken Promises Scorecard</div>
-  <p class="sdek">Every specific commitment made by governors, the Authority, and Prop 1A — graded against what actually happened. This is the official record.</p>
+  <div style="border-left:4px solid #c05820;padding:18px 22px;margin-bottom:24px;background:#fef8f3">
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Chapter 8 of 11 · What They Swore</div>
+    <div class="shed" style="margin-bottom:8px">BROKEN PROMISES</div>
+    <p style="font-family:var(--dis);font-size:clamp(15px,2vw,18px);color:var(--smoke);line-height:1.8;font-style:italic;margin:0">The ballot measure California voters approved in 2008 was not vague. It specified a price. It specified a deadline. It specified that no taxpayer subsidy would ever be required to operate the train. It specified that private investment would close any funding gaps. It specified ticket prices under $50. It specified trains running by 2020. We tracked twelve specific commitments. We graded every one of them. The result is not ambiguous.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;background:var(--news);margin-bottom:24px">
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:#c05820;line-height:1;letter-spacing:1px">12</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Promises Tracked</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Every specific commitment in Prop 1A and business plans</div>
+    </div>
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:var(--red);line-height:1;letter-spacing:1px">9</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Outright Failures</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Graded F · not delayed · broken</div>
+    </div>
+    <div style="background:var(--char);padding:18px 14px;text-align:center">
+      <div style="font-family:var(--hed);font-size:clamp(28px,5vw,44px);color:var(--red);line-height:1;letter-spacing:1px">0</div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5c5449;margin-top:7px">Fully Kept</div>
+      <div style="font-size:11px;color:#6a5a4a;margin-top:5px">Not one material promise met as of 2026</div>
+    </div>
+  </div>
   <div class="cgrid">
     <div class="cbox"><div class="ct">Promises — Pass / Fail / At Risk</div><div style="height:200px;position:relative"><canvas id="scoreChart"></canvas></div></div>
     <div class="cbox"><div class="ct">Original Prop 1A vs. Reality</div><div style="height:200px;position:relative"><canvas id="prop1aChart"></canvas></div></div>
@@ -73,6 +93,16 @@
   </div>
   <div class="sl" style="margin-top:20px">Promise-by-Promise Breakdown</div>
   <div id="promises-list"></div>
+
+  <!-- NEXT CHAPTER -->
+  <div style="margin-top:28px;padding:22px 26px;background:var(--char);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#5c5449;margin-bottom:6px">Chapter 9 →</div>
+      <div style="font-family:var(--hed);font-size:28px;color:#ede0d0;letter-spacing:1px;line-height:1;margin-bottom:6px">THE DRIFT</div>
+      <div style="font-size:13px;color:#7a6a5a;line-height:1.55">It didn't all fail at once. One revision at a time. One press conference at a time. The cost went up seven times. The deadline slipped 19 years. Here's how it happened.</div>
+    </div>
+    <a href="timeline.html" style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#b8832a;text-decoration:none;border:1px solid rgba(184,131,42,.3);padding:11px 22px;white-space:nowrap;background:rgba(184,131,42,.07)">See the timeline →</a>
+  </div>
 
 </main>
 <footer class="footer">
